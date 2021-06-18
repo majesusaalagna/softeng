@@ -83,13 +83,16 @@
 import { ref, reactive } from "vue";
 import Layout from "@/Layouts/Authenticated";
 import { Inertia } from "@inertiajs/inertia";
+
 export default {
     components: {
         Layout,
     },
+
     props: {
         errors: Object,
     },
+
     setup(props, context) {
         const form = reactive({
             id: null,
@@ -97,6 +100,7 @@ export default {
             type: "F",
             stock_account: null,
         });
+
         const submit = () => {
             Inertia.post(route("sc.store"), form, {
                 onSuccess: () => {
@@ -109,6 +113,7 @@ export default {
                 },
             });
         };
+
         return {
             form,
             submit,

@@ -40,7 +40,7 @@
                                 class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"
                             >
                                 <breeze-nav-link
-                                    :href="route('dashboard')"
+                                    :href="route('stock.index')"
                                     :active="route().current('dashboard')"
                                 >
                                     Stocks
@@ -194,6 +194,7 @@ import BreezeDropdownLink from "@/Components/DropdownLink";
 import BreezeNavLink from "@/Components/NavLink";
 import BreezeResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import FlashMessages from "@/Components/FlashMessages";
+
 export default {
     components: {
         BreezeApplicationLogo,
@@ -203,6 +204,7 @@ export default {
         BreezeResponsiveNavLink,
         FlashMessages,
     },
+
     data() {
         return {
             showingNavigationDropdown: false,

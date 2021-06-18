@@ -22,9 +22,8 @@
 import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
 
 export default {
-  components:{
-      BreezeAuthenticatedLayout,
+  components: {
+    BreezeAuthenticatedLayout,
   },
- 
 };
 </script>

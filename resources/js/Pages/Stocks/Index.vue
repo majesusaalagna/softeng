@@ -25,6 +25,7 @@
                         <th class="px-4 py-3">Barcode</th>
                          <th class="px-4 py-3">Discontinued</th>
                         <th class="px-4 py-3">Date Created</th>
+                        <th class="px-4 py-3">Action</th>
                     </tr>
                     
                     <tr v-for="item in stock" class="bg-gray-100 border-b border-gray-200">
@@ -35,6 +36,17 @@
                          <td class="px-4 py-3">{{item.barcode}}</td>
                           <td class="px-4 py-3">{{item.discontinued}}</td>
                         <td class="px-4 py-3">{{item.created_at}}</td>
+                         <td>
+                        <inertia-link :href="route('stock.show',item.id)">
+                          View
+                        </inertia-link>
+
+                            <inertia-link method="delete" :href="route('stock.destroy',item.id)">
+                          Delete
+                        </inertia-link>
+
+
+                </td>
                     </tr> 
                     <!-- each row -->
                  </table>
